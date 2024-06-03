@@ -34,6 +34,8 @@ form {
 }
 .calculator form input[type="text"] {
   grid-column: span 4;
+  text-align: right;
+  padding: 10px;
 }
 .clear {
   grid-column: span 3;
