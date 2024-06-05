@@ -9,82 +9,46 @@
   <body>
     <div class="calculator">
       <form name="forms">
-        <input type="text" name="output" readonly />
+        <input type="text" name="output" readonly value="0" />
         <input
           type="button"
           class="clear"
           value="c"
-          onclick="document.forms.output.value=''"
+          onclick="updateOutput('0')"
         />
         <input
           type="button"
           value="/"
           class="operator"
-          onclick="document.forms.output.value+= '/'"
+          onclick="updateOutput('/')"
         />
-        <input
-          type="button"
-          value="1"
-          onclick="document.forms.output.value+= '1'"
-        />
-        <input
-          type="button"
-          value="2"
-          onclick="document.forms.output.value+= '2'"
-        />
-        <input
-          type="button"
-          value="3"
-          onclick="document.forms.output.value+= '3'"
-        />
+        <input type="button" value="1" onclick="updateOutput('1')" />
+        <input type="button" value="2" onclick="updateOutput('2')" />
+        <input type="button" value="3" onclick="updateOutput('3')" />
         <input
           type="button"
           value="*"
           class="operator"
-          onclick="document.forms.output.value+= '*'"
+          onclick="updateOutput('*')"
         />
-        <input
-          type="button"
-          value="4"
-          onclick="document.forms.output.value+= '4'"
-        />
-        <input
-          type="button"
-          value="5"
-          onclick="document.forms.output.value+= 5"
-        />
-        <input
-          type="button"
-          value="6"
-          onclick="document.forms.output.value+= '6'"
-        />
+        <input type="button" value="4" onclick="updateOutput('4')" />
+        <input type="button" value="5" onclick="updateOutput('5')" />
+        <input type="button" value="6" onclick="updateOutput('6')" />
         <input
           type="button"
           value="+"
           class="operator"
-          onclick="document.forms.output.value+= '+'"
+          onclick="updateOutput('+')"
         />
-        <input
-          type="button"
-          value="7"
-          onclick="document.forms.output.value+= '7'"
-        />
-        <input
-          type="button"
-          value="8"
-          onclick="document.forms.output.value+= '8'"
-        />
-        <input
-          type="button"
-          value="9"
-          onclick="document.forms.output.value+= '9'"
-        />
+        <input type="button" value="7" onclick="updateOutput('7')" />
+        <input type="button" value="8" onclick="updateOutput('8')" />
+        <input type="button" value="9" onclick="updateOutput('9')" />
 
         <input
           type="button"
           value="-"
           class="operator"
-          onclick="document.forms.output.value+= '-'"
+          onclick="updateOutput('-')"
         />
         <input
           type="button"
@@ -92,11 +56,7 @@
           class="dot"
           onclick="document.forms.output.value+= '.'"
         />
-        <input
-          type="button"
-          value="0"
-          onclick="document.forms.output.value+= '0'"
-        />
+        <input type="button" value="0" onclick="updateOutput('0')" />
         <input
           type="button"
           value="="
@@ -105,5 +65,6 @@
         />
       </form>
     </div>
+    <script src="./js.js"></script>
   </body>
 </html>
