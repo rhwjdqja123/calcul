@@ -3,50 +3,81 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 880px;
 }
+
+.time {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+}
+
 .calculator {
-  border: 1px solid black;
-  background-color: gray;
+  background-color: black;
   padding: 5px;
   width: 286px;
+  height: 550px;
+  border-radius: 20px;
 }
+
 form {
+  margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(4, 65px);
   grid-auto-rows: 65px;
   grid-gap: 5px;
+  height: 50px;
+  border-radius: 10px;
 }
+
 .calculator form input {
   border: 3px solid black;
-
   cursor: pointer;
-  font-size: 19px;
+  font-size: 22px;
+  border-radius: 50px; /* 잘못된 border-radius 수정 */
+  padding: 10px;
+  background-color: #999898bd;
+  color: white;
 }
+
 .calculator form input:hover {
-  background-color: ghostwhite;
-  box-shadow: 1px 1px 2px black;
+  background-color: rgb(84, 88, 84);
+  box-shadow: 1px 1px 2px rgb(43, 42, 42);
 }
+
 .calculator form input[type="text"] {
   grid-column: span 4;
   text-align: right;
   padding: 10px;
+  background-color: rgb(3, 3, 3);
+  font-size: 50px;
+  color: white; /* 텍스트 색상 추가 */
 }
+
 .clear {
   grid-column: span 3;
-  background-color: #ed4800;
+  background-color: #b3b3b2 !important;
+  border-radius: 20px;
 }
+
 .operator {
-  background-color: rgb(243, 141, 94);
+  background-color: #ff9c07 !important;
 }
+
 .dot {
-  background-color: green;
+  background-color: #b3b3b2 !important;
 }
+
 .result {
-  grid-column: span 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  width: 100%; /* 원의 지름 */
+  height: 65px; /* 원의 지름 */
+  border-radius: 50%; /* 원 모양을 위한 수정 */
 }

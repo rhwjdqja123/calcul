@@ -8,13 +8,14 @@
   </head>
   <body>
     <div class="calculator">
+      <div class="time" id="time"></div>
       <form name="forms">
         <input type="text" name="output" readonly value="0" />
         <input
           type="button"
           class="clear"
           value="c"
-          onclick="updateOutput('0')"
+          onclick="document.forms.output.value=  0"
         />
         <input
           type="button"
